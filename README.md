@@ -7,7 +7,7 @@ The main feature of IMAGE STEGANOGRAPHY is to encode and decode the hidden messa
 This presentation focuses on the numerous steps to successfully embed and retrieve the data within an image.
 To ensure that our GUI-based application is user friendly.
 
-Image Steganography is categorised into two modules:
+Image Steganography is categorised into two modules:-
 - Encode
 - Decode
 
