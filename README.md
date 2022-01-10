@@ -19,6 +19,41 @@ Can enter a secret message in order to encode it into the selected image.
 Here users can select the image to extract the hidden message.
 Image should be of the .png format.
 
+#WORKING OF IMAGE STEGANOGRAPHY
+
+1.	Pixels are the building blocks of an image.
+2.	Every pixel contains three values: (red, green, blue) also known as RGB values.
+
+- Encode
+
+Suppose the message to be hidden is ‘GIET’.
+Here, only encoding of ‘G’ is considered for instance.
+
+ASCII value of G is 71.
+8-bit binary equivalent is 01000111
+
+First 3 pixel values: (188, 155, 168), (70, 167, 116), (132, 173, 97)                                [0 : even and 1:odd]
+
+0              1              0                   0                0                   1                   1                  1
+155           188         168               70             167                116                132              173      97
+
+New Image rgb values:
+154           187         168               70              166                115                131              173     96
+
+Similarily “IET” can be encoded.
+
+- Decode
+154           187         168               70              166                115                131              173     96
+
+8-bit binary equivalent:
+0               1             0                   0                 0                   1                     1                  1       
+Ninth value is even, so we continue the steps till it encounters odd.
+This binary data (01000111) decimal value is 71 and in ASCII it represents ‘G’
+
+Hence, we get the ‘G’ decoded.
+
+
+
 **Screenshots**
 ![Screenshot (241)](https://user-images.githubusercontent.com/79132253/124146580-86288f80-daab-11eb-8726-071213b1e493.png)
 ![Screenshot (242)](https://user-images.githubusercontent.com/79132253/124146595-8b85da00-daab-11eb-8855-e1d4ce277438.png)
